@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBoard | Connexion</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#76CDCD",
+                        secondary: "#26474E",
+                        accent: "#2CCED2",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-secondary to-primary flex items-center justify-center p-6">
+
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-2xl p-10">
+
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <div class="mx-auto w-16 h-16 rounded-2xl bg-accent flex items-center justify-center shadow-lg mb-4">
+                <span class="text-white text-3xl font-bold">C</span>
+            </div>
+
+            <h1 class="text-4xl font-bold text-secondary">
+                Care<span class="text-accent">Board</span>
+            </h1>
+
+            <p class="text-gray-500 mt-2">
+                Connectez-vous à votre espace client
+            </p>
+        </div>
+
+        <!-- Formulaire -->
+        <form class="space-y-5" action="./connexion.php" method="post">
+
+            <div>
+                <label class="block text-sm font-semibold text-secondary mb-2">
+                    Adresse e-mail
+                </label>
+
+                <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="nom@entreprise.fr"
+                    class="w-full rounded-xl border border-primary px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition">
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-secondary mb-2">
+                    Mot de passe
+                </label>
+
+                <input
+                    type="password"
+                    name="mdp"
+                    required
+                    placeholder="••••••••"
+                    class="w-full rounded-xl border border-primary px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent outline-none transition">
+            </div>
+
+            <div class="flex justify-end">
+                <a href="./inscription.html" class="text-sm text-accent hover:underline">
+                    S'inscrire ?
+                </a>
+            </div>
+
+            <button
+                name="btnCo"
+                method="submit"
+                class="w-full bg-accent hover:bg-secondary text-white font-semibold py-3 rounded-xl transition duration-300 shadow-lg hover:shadow-xl">
+                Se connecter
+            </button>
+
+        </form>
+
+        <div class="mt-8 text-center text-sm text-gray-500">
+            © 2026 CareBoard
+        </div>
+
+    </div>
+
+</body>
+</html>

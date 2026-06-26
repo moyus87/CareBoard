@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Connexion</title>
+</head>
+<body class="bg-sky-500">
+    <h1 class="text-white text-7xl absolute">CareBoard</h1>
+    <section class="h-screen flex items-center justify-center">
+        <form action="./connexion.php" method="post" name="formCo" class="bg-white grid grid-cols-1 place-items-center rounded-xl">
+            <p class="lg:text-4xl lg:m-8 m-10 text-8xl">Connexion</p>
+            <input type="text" required name="email" placeholder="example@gare.com" class="bg-gray-100 lg:m-9 lg:w-2xs lg:h-8 lg:text-2xl rounded-md mt-35 h-17.5 w-4/5 text-3xl">
+            <input type="password" required name="mdp" placeholder="mot de passe" class="bg-gray-100 lg:m-9 lg:w-2xs lg:h-8 lg:text-2xl rounded-md mt-35 h-17.5 w-4/5 text-3xl">
+            <button name="btnCo" method="submit" class="bg-sky-500 hover:bg-sky-700 lg:w-40 lg:text-2xl lg:mt-8 lg:mb-4 rounded-md mb-0 w-100 h-20 text-5xl mb-10">Se connecter</button>
+            <a href="./inscription.html" class="lg:ml-60 lg:text-xl ml-120 text-4xl underline underline-offset-2 text-blue-500 mb-4">S'inscrire</a>
+        </form>
+    </section>
+</body>
+</html>

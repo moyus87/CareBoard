@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CareBoard | Ajout patient</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #76CDCD;
+            --color-secondary: #26474E;
+            --color-accent: #2CCED2;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-secondary to-primary flex items-center justify-center p-6">
+
+    <!-- Logo fond -->
+    <h1 class="absolute top-4 left-6 text-white text-3xl font-bold tracking-wide">
+        CareBoard
+    </h1>
+
+    <section class="w-full max-w-5xl bg-white rounded-3xl shadow-2xl p-10">
+
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+
+            <a href="./user.php"
+               class="text-secondary hover:text-accent font-semibold text-lg transition">
+                ← Retour
+            </a>
+
+            <h2 class="text-3xl font-bold text-secondary">
+                Ajout d’un patient
+            </h2>
+
+            <div></div>
+        </div>
+
+        <!-- Formulaire -->
+        <form action="ajoutPatient1.php" method="post"
+              class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <input type="text" name="nom" required
+                   placeholder="Nom"
+                   class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+
+            <input type="text" name="prenom" required
+                   placeholder="Prénom"
+                   class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+
+            <input type="text" name="nump" required
+                   placeholder="N° patient"
+                   class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+
+            <input type="text" name="ide" required
+                   placeholder="IDE attribué"
+                   class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+
+            <input type="text" name="pompe" required
+                   placeholder="Modèle pompe"
+                   class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+
+            <div class="flex flex-col">
+                <label class="text-sm text-secondary font-semibold mb-2">
+                    Date dernière VR
+                </label>
+                <input type="date" name="ddvr"
+                       class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-sm text-secondary font-semibold mb-2">
+                    Date prochaine VR
+                </label>
+                <input type="date" name="dpvr"
+                       class="w-full rounded-xl border border-primary px-4 py-3 focus:ring-2 focus:ring-accent outline-none">
+            </div>
+
+            <!-- Bouton -->
+            <div class="md:col-span-2 mt-4">
+                <button type="submit" name="btnAj" action="/ajoutPatient1.php"
+                        class="w-full bg-accent hover:bg-secondary text-white font-semibold py-3 rounded-xl shadow-lg transition">
+                    Créer le patient
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+</body>
+
+</html>
